@@ -1,1 +1,9 @@
 spec/test-key.rb
+*.bundle
+*.o
+Makefile
+mkmf.log
+misc
+gems/
+vendor/
+pkg
