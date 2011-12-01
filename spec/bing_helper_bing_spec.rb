@@ -39,11 +39,11 @@ describe BingHelper::Bing do
   end
   
   it "should return a Hash object" do
-    @bing.web("ruby").should be_a(Hash)
+    @bing.web("ruby").should be_a(BingHelper::Response)
   end
   
   it "should return search results" do
-    @bing.web("ruby")["SearchResponse"].should_not be_empty
+    @bing.web("ruby").web_results.should_not be_empty
   end
   
   it "should return a proper query hash for a basic query" do

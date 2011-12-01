@@ -39,7 +39,11 @@ module BingHelper
       response = self.faraday_client.get do |req|
         req.url "", query_params_for(source, query, options)
       end
-      Yajl::Parser.new.parse(response.body)
+      begin
+        Response.new(Yajl::Parser.new.parse(response.body))
+      rescue
+        nil
+      end
     end
 
     def query_params_for(source, query, options)
