@@ -17,8 +17,7 @@ It's a pretty simple client:
 
     @bing = BingHelper::Bing.new("YOUR API KEY")
     results = @bing.web("ruby")
-    puts "Got #{results["SearchResponse"]["Web"]["Results"].length}
-    results"
+    puts "Got #{results["SearchResponse"]["Web"]["Results"].length} results"
 
 ## Testing Notes
 
