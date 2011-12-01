@@ -37,6 +37,10 @@ describe BingHelper::Bing do
   it "should provide a web search method" do
     @bing.should respond_to(:web)
   end
+   
+  it "should return the proper base_url" do
+    BingHelper::Bing.base_url.should == "http://api.search.live.net/json.aspx"
+  end
   
   it "should return a Hash object" do
     @bing.web("ruby").should be_a(BingHelper::Response)

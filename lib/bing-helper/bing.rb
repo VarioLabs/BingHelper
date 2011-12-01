@@ -6,7 +6,6 @@ module BingHelper
     
     attr_accessor :instance_options
     attr_reader :faraday_client
-    attr_reader :base_url
 
     API_URL="http://api.search.live.net/json.aspx"
     
@@ -67,7 +66,7 @@ module BingHelper
       
     end
     
-    def base_url
+    def self.base_url
       return API_URL
     end
     
