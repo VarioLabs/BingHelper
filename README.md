@@ -26,7 +26,7 @@ To test this, please create a `spec/test-key.rb` file that looks like
 this:
 
     module BingHelper
-      TEST_KEY="<YOUR BING API KEY HERE"
+      TEST_KEY="<YOUR BING API KEY HERE>"
     end
 
 You need your Bing API key in order to execute some of the tests. This
