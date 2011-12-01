@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bing-helper (0.0.1)
+    bing-helper (0.1.0)
       faraday (>= 0.7.5)
       yajl-ruby (~> 1.0)
 

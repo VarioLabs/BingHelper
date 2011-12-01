@@ -31,7 +31,7 @@ module BingHelper
     SOURCES.each do |source|
       fn = source.to_s.gsub(/[a-z][A-Z]/) {|c| "#{c[0,1]}_#{c[1,1]}" }.downcase
       class_eval "def #{fn}(query, options={}) ; search('#{source}', query, options) ; end"
-      class_eval "def #{fn}_search_url(query, options={}) ; query_params_for('#{source}', query, options) ; end"
+      class_eval "def #{fn}_search_params(query, options={}) ; query_params_for('#{source}', query, options) ; end"
     end
     
     def search(source, query, options={})

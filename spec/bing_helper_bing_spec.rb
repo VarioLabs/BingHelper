@@ -51,7 +51,7 @@ describe BingHelper::Bing do
   end
   
   it "should return a proper query hash for a basic query" do
-    @bing.web_search_url("ruby").should == {:AppId=>"677F875FA3B101E68C6D516EFFF88B95444E63E1", :sources=>"Web", :query=>"ruby"}
+    @bing.web_search_params("ruby").should == {:AppId=>"677F875FA3B101E68C6D516EFFF88B95444E63E1", :sources=>"Web", :query=>"ruby"}
   end
   
   
